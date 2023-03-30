@@ -1,0 +1,15 @@
+Task1: Создать класс Product
+        String name;
+        double price;
+        Создать класс VendingMachine
+        ArrayList<Product>;
+        Product getProductByName();
+        Product getProductByCost();
+
+        Сделать класс Product абстрактным, создать несколько наследников(к примеру бутылка воды, плитка шоколада)
+        сделать интерфейсом VendingMachine и реализовать класс какого то одного типа торгового автомата
+        (пример: Продающий бутылки воды автомат)
+
+        Создать перегруженный метод выдачи товара VendingMachine дополнив дополнительным входным параметром
+        (пример: getProduct(String name) выдающий товар по имени.
+        Создать метод возвращающий товар по имени и какому либо параметру товара getProduct(String name, double volume)

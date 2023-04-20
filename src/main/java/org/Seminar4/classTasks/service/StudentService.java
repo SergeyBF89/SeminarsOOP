@@ -6,16 +6,16 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StudentService implements UserService<Student> {
+public class StudentService implements UserService<org.homeWorkseminar4.homeTasks.data.Student> {
 
-    private final List<Student> students;
+    private final List<org.homeWorkseminar4.homeTasks.data.Student> students;
 
     public StudentService() {
         this.students = new ArrayList<>();
     }
 
     @Override
-    public List<Student> getAll() {
+    public List<org.homeWorkseminar4.homeTasks.data.Student> getAll() {
         return students;
     }
 
@@ -27,13 +27,13 @@ public class StudentService implements UserService<Student> {
     @Override
     public void create(String firstName, String secondName, String patronymic, String dateOfBirth) {
         Long countMaxId = 0L;
-        for (Student student: students){
+        for (org.homeWorkseminar4.homeTasks.data.Student student: students){
                 if (student.getStudentId() > countMaxId){
                     countMaxId = student.getStudentId();
             }
         }
         countMaxId++;
-        Student student = new Student(firstName, secondName, patronymic, dateOfBirth, Math.toIntExact(countMaxId));
+        org.homeWorkseminar4.homeTasks.data.Student student = new Student(firstName, secondName, patronymic, dateOfBirth, Math.toIntExact(countMaxId));
         students.add(student);
     }
 }
